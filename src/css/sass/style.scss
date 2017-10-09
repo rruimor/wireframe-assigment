@@ -1,0 +1,125 @@
+$base-color: grey;
+$light-base-color: lighten( $base-color, 30% );
+$navbar-height: 60px;
+$logos-height: 450px;
+$sections-height: 1000px;
+
+$img-container-height: 400px;
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $navbar-height;
+  width: 100%;
+  display: table;
+  background-color: #DDD;
+  text-align: center;
+
+  &__bar {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    margin: 0 15px;
+  }
+}
+
+.logos {
+  position: absolute;
+  left: 0;
+  top: $navbar-height;
+  height: $logos-height;
+  width: 100%;
+  display: table;
+
+  &__logo_section {
+    display: table-cell;
+    vertical-align: middle;
+
+    p {
+      text-align: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    &--dark {
+      background-color: darken( $base-color, 20% );
+    }
+
+    &--mid {
+      background-color: $base-color;
+    }
+
+    &--light {
+      background-color: $light-base-color;
+    }
+
+  }
+}
+
+.light-bg {
+  background-color: $light-base-color;
+}
+
+.section {
+  position: absolute;
+  top: $navbar-height + $logos-height;
+  height: $sections-height;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding: 20px 0;
+
+  &__container {
+    clear: left;
+  }
+
+  &__img_container {
+    height: $img-container-height;
+  }
+
+  &__title {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  &__row {
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.5em;
+    display: flex;
+
+    p {
+      padding: 0 30px;
+    }
+  }
+
+  &__column {
+    float: left;
+    display: inline-block;
+  }
+
+  &__box {
+    background-color: red;
+    height: $img-container-height / 4;
+    width: $img-container-height / 4;
+  }
+
+  &__column--2 {
+    width: 16.6777%;
+  }
+
+  &__column--6 {
+    width: 50%;
+  }
+
+  &__column--12 {
+    width: 100%;
+  }
+}
