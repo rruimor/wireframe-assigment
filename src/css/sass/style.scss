@@ -219,7 +219,7 @@ span.underlined {
       margin-bottom: $between-space-column-margin;
 
       &--dark {
-        background-color: grey;
+        background-color: $dark-base-color;
       }
 
       &--white {
@@ -274,5 +274,5 @@ span.underlined {
 .footer {
   flex: none;
   height: 50px;
-  background-color: grey;
+  background-color: $dark-base-color;
 }

@@ -129,7 +129,7 @@ span.underlined {
       background-color: #cdcdcd;
       margin-bottom: 15px; }
       .content .section__bar--dark {
-        background-color: grey; }
+        background-color: #343434; }
       .content .section__bar--white {
         background-color: white; }
       .content .section__bar--no-margin {
@@ -162,6 +162,6 @@ span.underlined {
 .footer {
   flex: none;
   height: 50px;
-  background-color: grey; }
+  background-color: #343434; }
 
 /*# sourceMappingURL=style.css.map */
