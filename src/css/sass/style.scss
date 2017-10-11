@@ -13,6 +13,10 @@ html, body {
   margin: 0;
 }
 
+span.underlined {
+  border-bottom: 2px solid;
+}
+
 .site {
   display: flex;
   min-height: 100%;
@@ -25,6 +29,10 @@ html, body {
 
 .space-between {
   justify-content: space-between;
+}
+
+.header {
+  flex: none;
 }
 
 .navbar {
@@ -50,11 +58,19 @@ html, body {
 .logos {
   height: $logos-height;
   width: 100%;
-  display: table;
+  display: flex;
+  flex-direction: row;
 
   &__logo_section {
-    display: table-cell;
-    vertical-align: middle;
+    flex: 1;
+    display: flex;
+    flex-direction: column;;
+    justify-content: center;
+
+    .hexagon {
+      width: 25%;
+      margin: 0 auto;
+    }
 
     p {
       text-align: center;
@@ -81,22 +97,24 @@ html, body {
   background-color: $light-base-color;
 }
 
+$between-space-column-margin: 15px;
+
 .section {
-  position: absolute;
-  top: $navbar-height + $logos-height;
-  left: 0;
   width: 100%;
   text-align: center;
   display: inline-block;
   padding: 20px 0;
   height: $sections-height;
 
+  &__container {
+    margin: 0 30px;
+  }
+
   input[type='checkbox'] {
     display: none;
   }
 
   input[type='checkbox']:before {
-    // margin: 0 15px;
     border: solid 1px;
   }
 
@@ -106,10 +124,6 @@ html, body {
 
   &__el--vertically-centered {
     margin: auto 0;
-  }
-
-  &__container {
-    clear: left;
   }
 
   &__title {
@@ -129,14 +143,22 @@ html, body {
     display: -moz-flex;
     display: -webkit-flex;
     flex-direction: column;
-  }
 
-  &__flex_column:nth-child(1) {
-    margin-right: 15px;
-  }
+    &:nth-child(1) {
+      margin-right: $between-space-column-margin;
 
-  &__flex_column:nth-child(2) {
-    margin-left: 15px;
+      & > p {
+        margin-right: $between-space-column-margin;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-left: $between-space-column-margin;
+
+      & > p {
+        margin-left: $between-space-column-margin;
+      }
+    }
   }
 
   &__flex_column--reverse {
@@ -171,21 +193,11 @@ html, body {
     }
   }
 
-  $between-space-column-margin: 15px;
-
   &__row {
     padding: 20px;
     text-align: justify;
     line-height: 1.5em;
     display: flex;
-
-    &--space-between {
-      justify-content: space-between;
-    }
-
-    p {
-      padding: 0 30px;
-    }
   }
 
   $bar_height: 50px;
@@ -197,7 +209,7 @@ html, body {
     margin-bottom: $between-space-column-margin;
 
     &--dark {
-      background-color: $dark-base-color
+      background-color: grey;
     }
 
     &--white {
@@ -219,11 +231,6 @@ html, body {
     &--4 {
       height: $bar_height * 4;
     }
-  }
-
-  &__column {
-    float: left;
-    display: inline-block;
   }
 
   &__img_container {
@@ -251,25 +258,10 @@ html, body {
       background-color: lighten( $light-base-color, 10%);
     }
   }
-
-  &__column--tab {
-    margin-left: 18px;
-  }
-
-  &__column--2 {
-    width: 16.6777%;
-  }
-
-  &__column--6 {
-    width: 50%;
-  }
-
-  &__column--12 {
-    width: 100%;
-  }
 }
 
 .footer {
+  flex: none;
   height: 50px;
-  background-color: $dark-base-color;
+  background-color: grey;
 }
