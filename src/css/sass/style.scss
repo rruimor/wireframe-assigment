@@ -105,7 +105,6 @@ span.underlined {
 
   .section {
     width: 100%;
-    text-align: center;
     display: inline-block;
     padding: 20px 0;
     height: $sections-height;
@@ -143,9 +142,9 @@ span.underlined {
     }
 
     &__flex_row {
+      display: flex;
       display: -moz-flex;
       display: -webkit-flex;
-      display: flex;
       flex-direction: row;
     }
 

@@ -61,7 +61,6 @@ span.underlined {
         background-color: #cdcdcd; }
   .content .section {
     width: 100%;
-    text-align: center;
     display: inline-block;
     padding: 20px 0;
     height: 1500px; }
@@ -86,9 +85,9 @@ span.underlined {
       margin-top: 50px;
       text-align: center; }
     .content .section__flex_row {
+      display: flex;
       display: -moz-flex;
       display: -webkit-flex;
-      display: flex;
       flex-direction: row; }
     .content .section__flex_column {
       display: flex;
