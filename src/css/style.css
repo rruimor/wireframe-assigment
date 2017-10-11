@@ -72,8 +72,15 @@ span.underlined {
     margin: 0 30px; }
   .section input[type='checkbox'] {
     display: none; }
-  .section input[type='checkbox']:before {
-    border: solid 1px; }
+  .section input[type=checkbox] + label::before {
+    content: "";
+    display: inline-flex;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background-color: white;
+    border: 2px solid #555;
+    align-content: center; }
   .section .right {
     text-align: right; }
   .section__el--vertically-centered {
